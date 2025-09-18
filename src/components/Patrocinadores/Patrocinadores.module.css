@@ -1,5 +1,7 @@
 .patrocinadores {
-    background-color: var(--verdeOscuro);
+    background-image: url("../../../public/img/fondoPatrocinadores.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     display: flex;

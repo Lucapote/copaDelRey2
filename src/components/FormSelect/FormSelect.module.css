@@ -1,0 +1,28 @@
+.inputContainer{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+}
+
+.label{
+    font-family: "Monserrat Bold";
+    font-size: 14px;
+    color: var(--verdeOscuro);
+    min-width: fit-content;
+}
+
+.input{
+    box-sizing: border-box;
+    flex: 1;
+    border: 2px solid var(--colorVerdeLogo);
+    height: 32px;
+    padding: 5px;
+
+    transition: all ease-in 0.3s;
+}
+
+.input:focus{
+    border-color: var(--verdeOscuro);
+}

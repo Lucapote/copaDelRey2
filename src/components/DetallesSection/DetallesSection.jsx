@@ -5,7 +5,7 @@ export const DetallesSection = () => {
     const reloj = "/img/reloj.png"
     const golfista = "/img/golfista.png"
   return (
-    <section className={styles.detalles}>
+    <section id="detalles" className={styles.detalles}>
       <div className={styles.container}>
         <div className={styles.infoDetalles}>
           <h3 className={styles.titleDetalles}>

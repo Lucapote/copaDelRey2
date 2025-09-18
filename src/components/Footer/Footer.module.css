@@ -1,0 +1,51 @@
+.footerSection{
+    width: 100vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerImg{
+    background-color: var(--colorVerdeLogo);
+    padding: 16px 0 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 120px;
+}
+
+.containerCopa{
+    background-color: var(--verdeOscuro);
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.imgLink{
+    width: 30px;
+}
+
+.imgLink_facebook{
+    width: auto;
+    height: 30px;
+    overflow-y: hidden;
+}
+
+.nombreTorneo{
+    font-size: 18px;
+    font-family: "Monserrat Regular";
+    color: var(--colorVerdeLogo);
+}

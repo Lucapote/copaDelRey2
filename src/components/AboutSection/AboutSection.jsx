@@ -6,7 +6,7 @@ export const AboutSection = () => {
     const foto3 = "/img/foto3.png"
 
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className={styles.container}>
         <div className={styles.aboutIzquierda}>
           <h2 className={styles.titleAbout}>

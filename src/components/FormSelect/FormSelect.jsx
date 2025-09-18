@@ -1,3 +1,5 @@
+import styles from "./FormSelect.module.css"
+
 export const FormSelect = ({ 
     id, 
     name, 
@@ -10,9 +12,10 @@ export const FormSelect = ({
     className = "" 
 }) => {
     return (
-        <div className={`form-field ${className}`}>
-            <label htmlFor={id}>{label}:</label>
-            <select 
+        <div className={styles.inputContainer}>
+            <label className={styles.label} htmlFor={id}>{label}:</label>
+            <select
+                className={styles.input}
                 id={id}
                 name={name}
                 value={value}

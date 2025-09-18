@@ -8,7 +8,7 @@ export const AgendaSection = () => {
     const cena = "/img/cena.png"
 
   return (
-    <section className={styles.agenda}>
+    <section id="agenda" className={styles.agenda}>
       <div className={styles.container}>
         <div className={styles.agendaFotoTitle}>
           <h3 className={styles.agendaTitle}>agenda</h3>

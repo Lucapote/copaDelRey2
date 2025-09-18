@@ -44,7 +44,7 @@ export const PremiosSection = () => {
     ];
 
     return (
-        <section className={styles.premiosSection}>
+        <section id='premios' className={styles.premiosSection}>
             <div className={styles.container}>
                 <h2 className={styles.premiosTitle}>premios</h2>
                 

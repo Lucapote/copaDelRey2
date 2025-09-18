@@ -1,19 +1,20 @@
-import logo1 from "../../img/patrocinadores/logo1.png"
-import logo2 from "../../img/patrocinadores/logo2.png"
-import logo3 from "../../img/patrocinadores/logo3.png"
-import logo4 from "../../img/patrocinadores/logo4.png"
-import logo5 from "../../img/patrocinadores/logo5.png"
-import logo6 from "../../img/patrocinadores/logo6.png"
-import logo7 from "../../img/patrocinadores/logo7.png"
-import logo8 from "../../img/patrocinadores/logo8.png"
-import logo9 from "../../img/patrocinadores/logo9.png"
-import logo10 from "../../img/patrocinadores/logo10.png"
-import logo11 from "../../img/patrocinadores/logo11.png"
-import logo12 from "../../img/patrocinadores/logo12.png"
 import styles from "./Patrocinadores.module.css"
 import { LogoItem } from "../LogoItem/LogoItem"
 
 export const Patrocinadores = () => {
+
+    const logo1 = "img/patrocinadores/logo1.png"
+    const logo2 = "img/patrocinadores/logo2.png"
+    const logo3 = "img/patrocinadores/logo3.png"
+    const logo4 = "img/patrocinadores/logo4.png"
+    const logo5 = "img/patrocinadores/logo5.png"
+    const logo6 = "img/patrocinadores/logo6.png"
+    const logo7 = "img/patrocinadores/logo7.png"
+    const logo8 = "img/patrocinadores/logo8.png"
+    const logo9 = "img/patrocinadores/logo9.png"
+    const logo10 = "img/patrocinadores/logo10.png"
+    const logo11 = "img/patrocinadores/logo11.png"
+    const logo12 = "img/patrocinadores/logo12.png"
 
     const logos = [
         {id: 1, src: logo1, alt: "Logo Catedral", fila: 1},
@@ -35,7 +36,7 @@ export const Patrocinadores = () => {
     const fila3 = logos.filter(logo=>logo.fila == 3);
 
   return (
-    <section className={styles.patrocinadores}>
+    <section id="patrocinadores" className={styles.patrocinadores}>
         <div className={styles.contenedorPatrocinadores}>
             <h2 className={styles.title}>patrocinadores</h2>
 

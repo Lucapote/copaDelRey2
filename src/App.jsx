@@ -1,4 +1,4 @@
-import { Section } from './components/Section/Section'
+import { Navbar } from './components/Navbar/Navbar'
 import { HeroSection } from './components/HeroSection/HeroSection'
 import { AboutSection } from './components/AboutSection/AboutSection'
 import { DetallesSection } from './components/DetallesSection/DetallesSection'
@@ -12,6 +12,7 @@ import "./index.css"
 function App() {
   return (
     <>
+      <Navbar/>
       <HeroSection/>
       <AboutSection/>
       <DetallesSection/>

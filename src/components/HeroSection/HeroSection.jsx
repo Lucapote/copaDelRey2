@@ -6,7 +6,7 @@ export const HeroSection = () => {
     const locWhite = "/img/iconoLocationBlanco.png"
 
   return (
-    <section className={styles.hero}>
+    <section id="home" className={styles.hero}>
       <div className={styles.container}>
         <article className={styles.heroInfo}>
           <div className={styles.logoTorneo}>
