@@ -1,0 +1,57 @@
+.patrocinadores {
+    background-color: var(--verdeOscuro);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem; /* Mueve el padding al padre */
+}
+
+.contenedorPatrocinadores {
+    max-width: 1439px;
+    width: 100%; /* Ocupa todo el ancho disponible del padre */
+    height: 100%; /* Ocupa toda la altura disponible del padre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--blanco);
+}
+
+.title {
+    font-family: "Glitten Regular";
+    color: var(--colorVerdeLogo);
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.gridLogos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.fila1 {
+    max-width: 700px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.fila2,
+.fila3 {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
