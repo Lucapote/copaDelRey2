@@ -1,10 +1,10 @@
-import React from 'react'
+import styles from "./TarjetaImagenes.module.css"
 
 export const TarjetaImagenes = ({posicion, imgSrc, altText, children}) => {
   return (
-    <div className={`img${posicion}`}>
-        <img src={imgSrc} alt={altText} />
-        <div className={`texto${posicion}`}>{children}</div>
+    <div className={styles[`containerImg${posicion}`]}>
+        <img className={styles[`img${posicion}`]} src={imgSrc} alt={altText} />
+        <div className={styles[`texto${posicion}`]}>{children}</div>
     </div>
   )
 }

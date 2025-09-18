@@ -39,18 +39,23 @@
 }
 
 :root{
+    /* Colores */
     --colorVerdeLogo: #E5E02D;
     --blanco: #fff;
     --verdeOscuro: #00453A;
     --negroTransparencia: rgba(0, 0, 0, 0.3);
+    --shadowText: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    --shadowBox: 0px 13px 14px rgba(0, 0, 0, 0.2);
 
     /* sizes */
-    --mxWidthLap: 1175px
+    --mxWidthLap: 1175px;
+    --paddingLap: 0 32px;
 }
 
 *{
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 a{
@@ -58,7 +63,6 @@ a{
 }
 
 body{
-    overflow-x: hidden;
     font-family: "Monserrat Regular", Arial, Helvetica, sans-serif;
 }
 

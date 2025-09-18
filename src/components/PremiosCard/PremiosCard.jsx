@@ -3,14 +3,16 @@ import styles from './PremiosCard.module.css';
 export const PremiosCard = ({ 
     titulo, 
     subtitulo, 
-    premios = [], 
-    className = "",
-    variant = "default" 
+    premios = [],
+    variant = "default"
 }) => {
+
+    const trofeo = "/img/trofeo.png"
+
     return (
-        <div className={`${styles.premiosCard} ${styles[variant]} ${className}`}>
+        <div className={`${styles.premiosCard} ${styles[variant]}`}>
             <div className={styles.header}>
-                <div className={styles.trophy}>🏆</div>
+                <img src={trofeo} alt="trofeo" className={styles.trofeo}/>
                 <h3 className={styles.titulo}>{titulo}</h3>
                 {subtitulo && (
                     <p className={styles.subtitulo}>{subtitulo}</p>

@@ -1,10 +1,10 @@
-import React from 'react'
+import styles from "./DetallesCard.module.css"
 
-export const DetallesCard = ({cName = "tarjetaDetalles" ,imgSrc, altText, children}) => {
+export const DetallesCard = ({imgSrc, altText, children}) => {
   return (
-    <div className={cName}>
-        <img src={imgSrc} alt={altText} />
-        <p>{children}</p>
+    <div className={styles.tarjetaDetalles}>
+        <img src={imgSrc} alt={altText} className={styles[`img_${altText}`]}/>
+        <p className={styles[`texto_${altText}`]}>{children}</p>
     </div>
   )
 }

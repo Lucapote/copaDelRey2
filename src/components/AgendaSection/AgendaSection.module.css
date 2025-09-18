@@ -1,0 +1,61 @@
+.agenda {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.agendaFotoTitle {
+    height: 70%;
+    background-image: url('/img/agendaFondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 44%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agendaTitle {
+    position: absolute;
+    right: 10%;
+    font-family: "Glitten Regular";
+    font-size: 80px;
+    color: var(--colorVerdeLogo);
+    text-shadow: var(--shadowText);
+    text-transform: uppercase;
+}
+
+.agendaDetalles {
+    height: fit-content;
+    padding: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--blanco);
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: var(--shadowBox);
+}
+
+.lineaDecoracionDetalles {
+    position: absolute;
+    top: 39%;
+    width: 90%;
+    height: 2px;
+    background-color: var(--colorVerdeLogo);
+    z-index: -1;
+}
+
+.boldDetallesAgenda {
+    font-family: "Monserrat Bold";
+}

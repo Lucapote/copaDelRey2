@@ -1,0 +1,70 @@
+.about {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00453A;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    align-items: center;
+    max-width: 1175px;
+    padding: var(--paddingLap)
+}
+
+.aboutIzquierda {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.titleAbout {
+    font-family: "Monserrat Regular";
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.spanTitleAbout {
+    font-family: "Glitten Regular";
+    text-transform: uppercase;
+    color: var(--colorVerdeLogo);
+    font-size: 48px;
+}
+
+.primerParrafoAbout {
+    font-family: "Monserrat Regular";
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.segundoParrafoAbout {
+    font-family: "Monserrat Regular";
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.glittenAbout {
+    color: #E5E02D;
+    font-family: "Glitten Regular";
+}
+
+.boldAbout {
+    font-family: "Monserrat Bold";
+}
+
+.aboutDerecha {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex: 1;
+}
+
+.textoIzquierda {
+    font-family: "Monserrat Regular";
+    font-size: 14px;
+    line-height: 1.5;
+}

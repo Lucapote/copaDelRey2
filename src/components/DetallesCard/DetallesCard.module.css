@@ -1,0 +1,29 @@
+
+.tarjetaDetalles {
+    min-height: 158px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Agregar las clases de imagen que faltan */
+.img_coctel,
+.img_torneo,
+.img_premiacion,
+.img_cena {
+    z-index: 3;
+}
+
+.texto_coctel,
+.texto_torneo,
+.texto_premiacion,
+.texto_cena {
+    text-align: center;
+    color: var(--verdeOscuro);
+    font-size: 20px;
+    z-index: 3;
+}

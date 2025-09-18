@@ -1,0 +1,102 @@
+.detalles {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/img/fondoGolf.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 134px;
+    padding: var(--paddingLap);
+}
+
+.infoDetalles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--blanco);
+}
+
+.titleDetalles {
+    font-family: "Monserrat Regular";
+    font-size: 24px;
+    color: var(--verdeOscuro);
+    margin-bottom: 30px;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.glittenDetalles {
+    color: var(--colorVerdeLogo);
+    font-family: "Glitten Regular";
+    text-transform: uppercase;
+    font-size: 64px;
+    text-shadow: var(--shadowText);
+}
+
+.dateDetalles {
+    margin-bottom: 40px;
+    background-color: var(--verdeOscuro);
+    width: fit-content;
+}
+
+.detallesDateText {
+    font-family: "Glitten Regular";
+    font-size: 48px;
+    color: var(--blanco);
+    padding: 0 16px;
+}
+
+.tarjetaInfoDetalles {
+    background-color: var(--blanco);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    border-left: solid 10px var(--verdeOscuro);
+    box-shadow: var(--shadowBox);
+}
+
+.lineOneTarjeta,
+.lineTwoTarjeta,
+.lineThreeTarjeta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lineThreeTarjeta{
+    margin-left: 35px;
+}
+
+.locationIcon,
+.relojIcon {
+    width: 20px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.locationTarjetaInfo {
+    font-family: "Monserrat Regular";
+    color: var(--verdeOscuro);
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.boldTarjeta {
+    
+    font-family: "Monserrat Bold";
+}
+
+.golfistaDetalles {
+    height: 90vh;
+    object-fit: cover;
+    max-width: 400px;
+}

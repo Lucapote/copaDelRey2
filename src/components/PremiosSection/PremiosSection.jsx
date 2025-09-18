@@ -46,7 +46,7 @@ export const PremiosSection = () => {
     return (
         <section className={styles.premiosSection}>
             <div className={styles.container}>
-                <h2 className={styles.mainTitle}>PREMIOS</h2>
+                <h2 className={styles.premiosTitle}>premios</h2>
                 
                 <div className={styles.premiosGrid}>
                     <div className={styles.topRow}>
