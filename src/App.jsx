@@ -5,6 +5,8 @@ import { TarjetaImagenes } from './components/TarjetaImagenes/TarjetaImagenes'
 import { DetallesCard } from './components/DetallesCard/DetallesCard'
 import { Patrocinadores } from './components/Patrocinadores/Patrocinadores'
 import {FormTorneo} from "./components/FormTorneo/FormTorneo"
+import { PremiosSection } from './components/PremiosSection/PremiosSection'
+import { Footer } from './components/Footer/Footer'
 import "./index.css"
 import logo from "./img/LogoVerdeBrillante.png"
 import locWhite from "./img/iconoLocationBlanco.png"
@@ -117,8 +119,10 @@ function App() {
           </DetallesCard>
         </div>
       </Section>
+      <PremiosSection/>
       <Patrocinadores/>
       <FormTorneo/>
+      <Footer/>
     </>
   )
 }

@@ -24,7 +24,11 @@ export const FormTorneo = () => {
 
     return (
         <div className="form-container">
-            <h2>Registro - Torneo de Golf</h2>
+
+            <div>
+            <h2>Registro</h2>
+            <img src="/img/LogoVerdeBrillante.png" alt="Logo" />
+            </div>
 
             <form onSubmit={handleSubmit} className="form-torneo">
                 <div className="form-row">
@@ -34,6 +38,7 @@ export const FormTorneo = () => {
                         label="Nombre Completo"
                         value={formData.nombre}
                         onChange={handleInputChange}
+                        placeholder="Tiger Woods"
                         required
                     />
                     
@@ -43,7 +48,7 @@ export const FormTorneo = () => {
                         label="Handicap"
                         value={formData.handicap}
                         onChange={handleInputChange}
-                        placeholder="Solo números"
+                        placeholder="Handicap"
                         required
                     />
                 </div>
@@ -55,7 +60,7 @@ export const FormTorneo = () => {
                         label="GHNI"
                         value={formData.ghni}
                         onChange={handleInputChange}
-                        placeholder="Solo números"
+                        placeholder="GHNI"
                         required
                     />
                     
@@ -65,7 +70,7 @@ export const FormTorneo = () => {
                         label="Edad"
                         value={formData.edad}
                         onChange={handleInputChange}
-                        placeholder="Solo números"
+                        placeholder="49"
                         required
                     />
                 </div>
@@ -99,6 +104,7 @@ export const FormTorneo = () => {
                         label="Ciudad"
                         value={formData.ciudad}
                         onChange={handleInputChange}
+                        placeholder="Cypress"
                         required
                     />
                     
@@ -109,6 +115,7 @@ export const FormTorneo = () => {
                         label="Teléfono"
                         value={formData.telefono}
                         onChange={handleInputChange}
+                        placeholder="9989998888"
                         required
                     />
                 </div>
@@ -121,6 +128,7 @@ export const FormTorneo = () => {
                         label="Correo Electrónico"
                         value={formData.correo}
                         onChange={handleInputChange}
+                        placeholder="tiger@woods.com"
                         required
                     />
                     
@@ -130,6 +138,7 @@ export const FormTorneo = () => {
                         label="Nombre de la Pareja"
                         value={formData.nombrePareja}
                         onChange={handleInputChange}
+                        placeholder="Scottie Scheffler"
                         required
                     />
                 </div>
