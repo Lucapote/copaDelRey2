@@ -9,18 +9,20 @@ export const FormSelect = ({
     options, 
     required = false, 
     placeholder = "Selecciona una opción",
+    disabled = false,
     className = "" 
 }) => {
     return (
         <div className={styles.inputContainer}>
             <label className={styles.label} htmlFor={id}>{label}:</label>
             <select
-                className={styles.input}
+                className={`${styles.input} ${disabled ? styles.disabled : ''}`}
                 id={id}
                 name={name}
                 value={value}
                 onChange={onChange}
                 required={required}
+                disabled={disabled}
             >
                 <option value="">{placeholder}</option>
                 {options.map((option) => (

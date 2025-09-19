@@ -63,11 +63,150 @@
     width: fit-content;
     padding: 16px 24px;
     margin-top: 16px;
-
+    cursor: pointer;
     transition: all ease-in 0.3s;
 }
 
-.submitButton:active{
+.submitButton:hover:not(:disabled){
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.submitButton:active:not(:disabled){
     color: var(--colorVerdeLogo);
     background-color: var(--verdeOscuro);    
+}
+
+.submitButton:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Estado cuando ya está registrado */
+.submitButton.registered{
+    background-color: #28a745;
+    color: white;
+    cursor: default;
+    opacity: 1;
+}
+
+.submitButton.registered:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+/* Estilos para mensajes */
+.message{
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin-top: 16px;
+    font-family: "Monserrat", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+    max-width: 500px;
+    width: 100%;
+}
+
+.message.success{
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error{
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .formSection {
+        padding: 16px 32px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .container {
+        min-width: unset;
+        width: 100%;
+        padding: 32px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .imgHeader {
+        width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .formSection {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 24px;
+        gap: 16px;
+    }
+
+    .headerForm {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .imgHeader {
+        width: 120px;
+    }
+
+    .formRow {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .submitButton {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    .message {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 16px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .imgHeader {
+        width: 100px;
+    }
+
+    .submitButton {
+        font-size: 14px;
+    }
 }

@@ -9,13 +9,14 @@ export const FormInput = ({
     onChange, 
     required = false, 
     placeholder = "",
+    disabled = false,
     className = "inputContainer" 
 }) => {
     return (
         <div className={styles[className]}>
             <label className={styles.label} htmlFor={id}>{label}:</label>
             <input
-                className={styles.input}
+                className={`${styles.input} ${disabled ? styles.disabled : ''}`}
                 type={type}
                 id={id}
                 name={name}
@@ -23,6 +24,7 @@ export const FormInput = ({
                 onChange={onChange}
                 placeholder={placeholder}
                 required={required}
+                disabled={disabled}
             />
         </div>
     );

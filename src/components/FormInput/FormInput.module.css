@@ -18,10 +18,22 @@
     border: 2px solid var(--colorVerdeLogo);
     height: 32px;
     padding: 10px;
-
     transition: all ease-in 0.3s;
 }
 
 .input:focus{
     border-color: var(--verdeOscuro);
+}
+
+.input.disabled,
+.input:disabled{
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+
+.input.disabled:focus,
+.input:disabled:focus{
+    border-color: #ddd;
 }

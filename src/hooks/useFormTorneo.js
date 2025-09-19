@@ -17,6 +17,7 @@ export const useFormTorneo = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [message, setMessage] = useState("");
     const [isSuccess, setIsSuccess] = useState(false);
+    const [isRegistered, setIsRegistered] = useState(false); // Nuevo estado para mantener el registro
 
     const formatPhoneNumber = (phone) => {
         const cleanPhone = phone.replace(/\D/g, '');
@@ -70,11 +71,19 @@ export const useFormTorneo = () => {
             correo: "",
             nombrePareja: ""
         });
-        setMessage("");
-        setIsSuccess(false);
+        // No reseteamos el mensaje ni isSuccess si el usuario ya está registrado
+        if (!isRegistered) {
+            setMessage("");
+            setIsSuccess(false);
+        }
     };
 
     const submitForm = async () => {
+        // Si ya está registrado, no permitir otro registro
+        if (isRegistered) {
+            return;
+        }
+
         setIsLoading(true);
         setMessage("");
         setIsSuccess(false);
@@ -111,11 +120,20 @@ export const useFormTorneo = () => {
             if (response.ok) {
                 setMessage("¡Registro exitoso! Te has inscrito al torneo correctamente.");
                 setIsSuccess(true);
+                setIsRegistered(true); // Marcar como registrado
                 resetForm();
             } else {
                 const errorData = await response.json();
                 console.error("Error de Brevo", errorData);
-                setMessage("Hubo un error al registrarte. Por favor, intenta nuevamente.");
+                
+                // Manejo específico de errores
+                if (errorData.code === 'invalid_parameter' && errorData.message.includes('phone')) {
+                    setMessage("El número de teléfono no es válido. Por favor, revisa que esté correcto.");
+                } else if (errorData.code === 'duplicate_parameter') {
+                    setMessage("Este correo ya está registrado en el torneo.");
+                } else {
+                    setMessage("Hubo un error al registrarte. Por favor, intenta nuevamente.");
+                }
                 setIsSuccess(false);
             }
         } catch (error) {
@@ -132,6 +150,7 @@ export const useFormTorneo = () => {
         isLoading,
         message,
         isSuccess,
+        isRegistered, // Exportar el nuevo estado
         handleInputChange,
         submitForm,
         resetForm

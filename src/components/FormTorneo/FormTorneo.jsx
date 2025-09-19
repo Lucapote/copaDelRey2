@@ -9,6 +9,7 @@ export const FormTorneo = () => {
         isLoading,
         message,
         isSuccess,
+        isRegistered,
         handleInputChange,
         submitForm
     } = useFormTorneo();
@@ -21,6 +22,13 @@ export const FormTorneo = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         submitForm();
+    };
+
+    // Determinar el texto del botón
+    const getButtonText = () => {
+        if (isRegistered) return "✓ Ya estás registrado";
+        if (isLoading) return "Registrando...";
+        return "Enviar inscripción";
     };
 
     return (
@@ -42,6 +50,7 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             placeholder="Tiger Woods"
                             required
+                            disabled={isRegistered}
                         />
                         
                         <FormInput
@@ -52,6 +61,7 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             placeholder="Handicap"
                             required
+                            disabled={isRegistered}
                         />
                     </div>
 
@@ -64,6 +74,7 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             placeholder="GHNI"
                             required
+                            disabled={isRegistered}
                         />
                         
                         <FormInput
@@ -74,6 +85,7 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             placeholder="49"
                             required
+                            disabled={isRegistered}
                         />
                     </div>
 
@@ -86,6 +98,7 @@ export const FormTorneo = () => {
                             value={formData.fechaNacimiento}
                             onChange={handleInputChange}
                             required
+                            disabled={isRegistered}
                         />
                         
                         <FormSelect
@@ -96,6 +109,7 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             options={sexoOptions}
                             required
+                            disabled={isRegistered}
                         />
                     </div>
 
@@ -108,6 +122,7 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             placeholder="Cypress"
                             required
+                            disabled={isRegistered}
                         />
                         
                         <FormInput
@@ -119,6 +134,7 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             placeholder="9989998888"
                             required
+                            disabled={isRegistered}
                         />
                     </div>
 
@@ -132,6 +148,7 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             placeholder="tiger@woods.com"
                             required
+                            disabled={isRegistered}
                         />
                         
                         <FormInput
@@ -142,22 +159,26 @@ export const FormTorneo = () => {
                             onChange={handleInputChange}
                             placeholder="Scottie Scheffler"
                             required
+                            disabled={isRegistered}
                         />
                     </div>
 
-                    <button type="submit" disabled={isLoading} className={styles.submitButton}>
-                        {isLoading ? "Registrando..." : "Enviar inscripción"}
+                    <button 
+                        type="submit" 
+                        disabled={isLoading || isRegistered} 
+                        className={`${styles.submitButton} ${isRegistered ? styles.registered : ''}`}
+                    >
+                        {getButtonText()}
                     </button>
 
                     {message && (
-                        <div className={`message ${isSuccess ? 'success' : 'error'}`}>
+                        <div className={`${styles.message} ${isSuccess ? styles.success : styles.error}`}>
                             {message}
                         </div>
                     )}
                 </form>
             </div>
         </section>
-        
     );
 };
 
