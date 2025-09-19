@@ -60,35 +60,45 @@
     font-family: "Monserrat Bold";
 }
 
-@media (max-width: 1024px){
-    .agenda{
+@media (max-width: 1024px) {
+    .agenda {
         height: auto;
         min-height: 100vh;
+        position: relative;
     }
 
-    .container{
+    .container {
         background-color: var(--verdeOscuro);
+        height: 100%;
+        position: relative;
     }
 
-    .agendaFotoTitle{
+    .agendaFotoTitle {
         background-position: 18% center;
-        height: 40%;
+        height: 36vh; /* Como pediste */
     }
 
-    .agendaTitle{
+    .agendaTitle {
         position: static;
         font-size: 64px;
     }
 
-    .agendaDetalles{
+    .agendaDetalles {
         flex-direction: column;
         width: 80%;
-        bottom: 0%;
+        position: relative; /* Mantener absolute */
+        bottom: 0; /* Pegado al bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 2rem;
+        background-color: var(--blanco);
+        box-shadow: var(--shadowBox);
+        /* El height se ajustará automáticamente al contenido */
     }
 
-    .lineaDecoracionDetalles{
+    .lineaDecoracionDetalles {
         width: 2px;
-        height: 95%;
-        top: unset;
+        height: 96%;
+        top: 2%;
     }
 }
