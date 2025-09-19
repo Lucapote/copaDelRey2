@@ -22,6 +22,7 @@
     .containerImgDerecha,
     .containerImgIzquierda{
         flex-direction: row;
+        flex: 1;
     }
 
     .imgIzquierda,
