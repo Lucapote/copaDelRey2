@@ -140,7 +140,7 @@
     .container {
         min-width: unset;
         width: 100%;
-        padding: 32px;
+        padding: 16px;
     }
 
     .title {
@@ -148,63 +148,11 @@
     }
 
     .imgHeader {
+        display: none;
         width: 140px;
     }
-}
 
-@media (max-width: 768px) {
-    .formSection {
-        padding: 16px;
-    }
-
-    .container {
-        padding: 24px;
-        gap: 16px;
-    }
-
-    .headerForm {
+    .formRow{
         flex-direction: column;
-        gap: 16px;
-    }
-
-    .title {
-        font-size: 36px;
-    }
-
-    .imgHeader {
-        width: 120px;
-    }
-
-    .formRow {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .submitButton {
-        width: 100%;
-        padding: 14px 20px;
-    }
-
-    .message {
-        font-size: 13px;
-        padding: 10px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 16px;
-    }
-
-    .title {
-        font-size: 28px;
-    }
-
-    .imgHeader {
-        width: 100px;
-    }
-
-    .submitButton {
-        font-size: 14px;
     }
 }

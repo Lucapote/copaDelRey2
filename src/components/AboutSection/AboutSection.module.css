@@ -70,6 +70,11 @@
 }
 
 @media (max-width: 1024px){
+
+    .about{
+        height: auto;
+    }
+
     .container{
         flex-direction: column;
         padding: 32px;
@@ -78,6 +83,7 @@
 
     .aboutIzquierda{
         padding: 0;
+        flex: unset;
     }
 
     .titleAbout{
@@ -94,7 +100,13 @@
         font-size: 16px;
     }
 
+    .segundoParrafoAbout{
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--colorVerdeLogo);
+    }
+
     .aboutDerecha{
         flex-direction: column;
+        height: fit-content;
     }
 }

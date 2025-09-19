@@ -22,27 +22,22 @@
     .containerImgDerecha,
     .containerImgIzquierda{
         flex-direction: row;
-        flex: 1;
+        flex: none;
     }
 
     .imgIzquierda,
     .imgDerecha{
-        width: unset;
+        display: none;
     }
 
     .textoIzquierda,
     .textoDerecha{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: fit-content;
     }
 
-    .textoDerecha{
-        order: 1;
-    }
-
-    .imgDerecha{
-        order: 2;
+    .textoIzquierda{
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--colorVerdeLogo);
     }
 
 }

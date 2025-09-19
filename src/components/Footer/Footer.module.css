@@ -49,3 +49,9 @@
     font-family: "Monserrat Regular";
     color: var(--colorVerdeLogo);
 }
+
+@media (max-width: 1024px){
+    .footerSection{
+        height: 30vh;
+    }
+}

@@ -31,14 +31,12 @@ export const AboutSection = () => {
         <div className={styles.aboutDerecha}>
           <TarjetaImagenes posicion={"Izquierda"} imgSrc={foto2} altText={"Campo de Golf"}>
             <p className={styles.textoIzquierda}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur commodi error reiciendis, 
-              animi dolore dicta saepe consequatur veniam labore voluptate officiis dignissimos autem nisi in.
+              El Tinto Cancún Country Club es un campo de golf de clase mundial diseñado por Nick Price. Sus 18 hoyos par 72 se distinguen por un trazado retador y vistas espectaculares, rodeado de naturaleza y con instalaciones de primer nivel que garantizan una experiencia única para jugadores de todos los niveles.
             </p>
           </TarjetaImagenes>
           <TarjetaImagenes posicion={"Derecha"} imgSrc={foto3} altText={"Bandera el tinto"}>
             <p className={styles.textoIzquierda}>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur commodi error reiciendis, 
-              animi dolore dicta saepe consequatur veniam labore voluptate officiis dignissimos autem nisi in.
+              El Tinto Cancún Country Club se ha consolidado como uno de los campos más prestigiosos de México. Reconocido por su diseño exclusivo y torneos de alto nivel, representa un referente de excelencia en golf y hospitalidad, siendo sinónimo de distinción, calidad y prestigio en la Riviera Maya.
             </p>
           </TarjetaImagenes>
         </div>

@@ -37,3 +37,9 @@
 .input:disabled:focus{
     border-color: #ddd;
 }
+
+@media (max-width: 1024px){
+    .inputContainer{
+        width: unset;
+    }
+}
