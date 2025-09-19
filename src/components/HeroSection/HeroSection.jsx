@@ -37,8 +37,8 @@ export const HeroSection = () => {
             </p>
           </div>
           <div className={styles.buttonsContainer}>
-            <BotonContainer textButton={"inscríbete ahora"}/>
-            <BotonContainer textButton={"ver premios"}/>
+            <BotonContainer textButton={"inscríbete ahora"} link="#registro"/>
+            <BotonContainer textButton={"ver premios"} link="#premios"/>
           </div>
         </article>
       </div>
