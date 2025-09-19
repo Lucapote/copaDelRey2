@@ -72,5 +72,28 @@
 @media (max-width: 1024px){
     .container{
         flex-direction: column;
+        padding: 32px;
+    }
+
+    .aboutIzquierda{
+        padding: 0;
+    }
+
+    .titleAbout{
+        text-align: center;
+        font-size: 26px;
+    }
+
+    .spanTitleAbout{
+        font-size: 32px;
+    }
+
+    .primerParrafoAbout,
+    .segundoParrafoAbout{
+        font-size: 16px;
+    }
+
+    .aboutDerecha{
+        flex-direction: column;
     }
 }

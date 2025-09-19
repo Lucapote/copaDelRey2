@@ -1,7 +1,7 @@
 
 .containerImgIzquierda,
 .containerImgDerecha{
-    width: 50%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -14,5 +14,34 @@
 
 .textoIzquierda,
 .textoDerecha{
+    flex: 1;
     font-family: "Monserrat Regular";
+}
+
+@media (max-width: 1024px){
+    .containerImgDerecha,
+    .containerImgIzquierda{
+        flex-direction: row;
+    }
+
+    .imgIzquierda,
+    .imgDerecha{
+        width: unset;
+    }
+
+    .textoIzquierda,
+    .textoDerecha{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textoDerecha{
+        order: 1;
+    }
+
+    .imgDerecha{
+        order: 2;
+    }
+
 }
