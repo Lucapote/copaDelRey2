@@ -27,3 +27,21 @@
     font-size: 20px;
     z-index: 3;
 }
+
+@media (max-width: 1024px){
+    .texto_coctel,
+    .texto_torneo,
+    .texto_premiacion,
+    .texto_cena {
+        background-color: var(--blanco);
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .img_coctel,
+    .img_torneo,
+    .img_premiacion,
+    .img_cena {
+        width: 90px;
+    }
+}

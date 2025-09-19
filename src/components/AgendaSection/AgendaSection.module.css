@@ -59,3 +59,35 @@
 .boldDetallesAgenda {
     font-family: "Monserrat Bold";
 }
+
+@media (max-width: 1024px){
+    .agenda{
+        height: 120vh;
+    }
+
+    .container{
+        background-color: var(--verdeOscuro);
+    }
+
+    .agendaFotoTitle{
+        background-position: 18% center;
+        height: 40%;
+    }
+
+    .agendaTitle{
+        position: static;
+        font-size: 64px;
+    }
+
+    .agendaDetalles{
+        flex-direction: column;
+        width: 80%;
+        bottom: 0%;
+    }
+
+    .lineaDecoracionDetalles{
+        width: 2px;
+        height: 95%;
+        top: unset;
+    }
+}

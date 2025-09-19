@@ -100,3 +100,30 @@
     object-fit: cover;
     max-width: 400px;
 }
+
+@media (max-width: 1024px){    
+    .container{
+        flex-direction: column;
+    }
+
+    .golfistaDetalles{
+        display: none;
+    }
+
+    .glittenDetalles{
+        font-size: 48px;
+    }
+
+    .detallesDateText{
+        font-size: 36px;
+    }
+
+    .locationTarjetaInfo{
+        font-size: 16px;
+    }
+
+    .tarjetaInfoDetalles{
+        border-left: none;
+        border-top: solid 10px var(--verdeOscuro);
+    }
+}
