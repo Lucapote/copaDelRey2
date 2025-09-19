@@ -62,7 +62,8 @@
 
 @media (max-width: 1024px){
     .agenda{
-        height: 120vh;
+        height: auto;
+        min-height: 100vh;
     }
 
     .container{
