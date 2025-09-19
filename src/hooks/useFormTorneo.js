@@ -100,6 +100,7 @@ export const useFormTorneo = () => {
                         SEXO: formData.sexo,
                         CIUDAD: formData.ciudad,
                         SMS: formattedPhone,
+                        WHATSAPP: formattedPhone,
                         NOMBRE_PAREJA: formData.nombrePareja
                     },
                     listIds: [2],
