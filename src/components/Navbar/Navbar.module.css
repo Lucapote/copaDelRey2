@@ -24,7 +24,8 @@
 }
 
 .item {
-  position: relative;
+    position: relative;
+    border-right: 1px solid var(--colorVerdeLogo);
 }
 
 .link {
@@ -34,10 +35,9 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 16px 20px;
-  display: block;
+  display: inline-block;
   transition: all 0.3s ease;
   white-space: nowrap;
-  border-right: 1px solid var(--colorVerdeLogo);
 }
 
 .item:last-child .link {
