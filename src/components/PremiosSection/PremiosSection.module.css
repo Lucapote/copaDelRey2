@@ -35,3 +35,113 @@
     justify-content: center;
     gap: 10px;
 }
+
+/* Estilos para el carrusel móvil */
+.carouselWrapper {
+    width: 100%;
+    max-width: 90vw;
+    position: relative;
+}
+
+.carouselContainer {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--colorVerdeLogo) rgba(255, 255, 255, 0.2);
+    padding: 1rem 0;
+}
+
+/* Estilos para la barra de scroll */
+.carouselContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carouselContainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.carouselContainer::-webkit-scrollbar-thumb {
+    background: var(--colorVerdeLogo);
+    border-radius: 10px;
+}
+
+.carouselContainer::-webkit-scrollbar-thumb:hover {
+    background: var(--verdeOscuro);
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: max-content;
+}
+
+.carouselItem {
+    flex: 0 0 auto;
+    width: 300px; /* Ancho fijo para mostrar una tarjeta a la vez */
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .premiosSection {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .premiosTitle {
+        font-size: 48px;
+        margin-bottom: 2rem;
+    }
+
+    /* Ocultar grid original en móvil */
+    .premiosGrid {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .carouselItem {
+        width: 280px;
+    }
+
+    .carouselTrack {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .premiosTitle {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .premiosTitle {
+        font-size: 32px;
+        margin-bottom: 1.5rem;
+    }
+
+    .carouselItem {
+        width: 250px;
+    }
+
+    .carouselTrack {
+        gap: 0.8rem;
+        padding: 0.3rem;
+    }
+
+    .carouselContainer::-webkit-scrollbar {
+        height: 6px;
+    }
+}
