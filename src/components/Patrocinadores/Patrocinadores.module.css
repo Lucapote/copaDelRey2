@@ -7,13 +7,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 2rem; /* Mueve el padding al padre */
+    padding: 2rem 2rem;
 }
 
 .contenedorPatrocinadores {
     max-width: 1439px;
-    width: 100%; /* Ocupa todo el ancho disponible del padre */
-    height: 100%; /* Ocupa toda la altura disponible del padre */
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,6 +30,7 @@
     text-transform: uppercase;
 }
 
+/* Estilos para desktop - Grid original */
 .gridLogos {
     display: flex;
     flex-direction: column;
@@ -56,4 +57,125 @@
 .fila3 {
     justify-content: space-between;
     flex-wrap: nowrap;
+}
+
+/* Estilos para el carrusel móvil con scroll */
+.carouselWrapper {
+    width: 100%;
+    max-width: 90vw;
+    position: relative;
+}
+
+.carouselContainer {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--colorVerdeLogo) rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para la barra de scroll */
+.carouselContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carouselContainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.carouselContainer::-webkit-scrollbar-thumb {
+    background: var(--colorVerdeLogo);
+    border-radius: 10px;
+}
+
+.carouselContainer::-webkit-scrollbar-thumb:hover {
+    background: var(--verdeOscuro);
+}
+
+.carouselTrack {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem;
+    width: max-content;
+}
+
+.carouselItem {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.carouselItem:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .patrocinadores {
+        padding: 1rem;
+        height: auto;
+    }
+
+    .contenedorPatrocinadores {
+        padding: 2rem 1rem;
+    }
+
+    .title {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carouselItem {
+        width: 200px;
+        height: 120px;
+    }
+
+    .carouselTrack {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .scrollHint {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .carouselItem {
+        width: 150px;
+        height: 100px;
+        padding: 0.5rem;
+    }
+
+    .carouselTrack {
+        gap: 0.5rem;
+    }
+
+    .carouselContainer::-webkit-scrollbar {
+        height: 6px;
+    }
 }
