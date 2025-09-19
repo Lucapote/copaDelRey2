@@ -43,6 +43,8 @@
     --colorVerdeLogo: #E5E02D;
     --blanco: #fff;
     --verdeOscuro: #00453A;
+    --colorFondoError: #f8d7da;
+    --colorTextoError: #721c24;
     --negroTransparencia: rgba(0, 0, 0, 0.3);
     --shadowText: 2px 2px 4px rgba(0, 0, 0, 0.5);
     --shadowBox: 0px 13px 14px rgba(0, 0, 0, 0.2);

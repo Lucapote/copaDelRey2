@@ -26,7 +26,7 @@ export const FormTorneo = () => {
 
     // Determinar el texto del botón
     const getButtonText = () => {
-        if (isRegistered) return "✓ Ya estás registrado";
+        if (isRegistered) return " Ya estás registrado";
         if (isLoading) return "Registrando...";
         return "Enviar inscripción";
     };
