@@ -59,7 +59,7 @@
     flex-wrap: nowrap;
 }
 
-/* Estilos para el carrusel móvil con scroll */
+/* Estilos para el carrusel móvil con auto scroll */
 .carouselWrapper {
     width: 100%;
     max-width: 90vw;
@@ -70,13 +70,14 @@
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: auto; /* Cambiado de smooth a auto para mejor control manual */
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
     scrollbar-color: var(--colorVerdeLogo) rgba(255, 255, 255, 0.2);
+    cursor: grab;
 }
 
-/* Estilos para la barra de scroll */
+/* Estilos para la barra de scroll - ahora visible */
 .carouselContainer::-webkit-scrollbar {
     height: 8px;
 }
@@ -93,6 +94,10 @@
 
 .carouselContainer::-webkit-scrollbar-thumb:hover {
     background: var(--verdeOscuro);
+}
+
+.carouselContainer:active {
+    cursor: grabbing;
 }
 
 .carouselTrack {
@@ -112,19 +117,11 @@
     border-radius: 10px;
     padding: 1rem;
     transition: transform 0.3s ease;
+    user-select: none; /* Prevenir selección de texto durante auto scroll */
 }
 
 .carouselItem:hover {
     transform: scale(1.05);
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 1;
-    }
 }
 
 /* Media Queries */
@@ -153,10 +150,6 @@
         gap: 1rem;
         padding: 0.5rem;
     }
-
-    .scrollHint {
-        font-size: 12px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -173,9 +166,5 @@
 
     .carouselTrack {
         gap: 0.5rem;
-    }
-
-    .carouselContainer::-webkit-scrollbar {
-        height: 6px;
     }
 }

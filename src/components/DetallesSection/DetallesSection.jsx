@@ -21,8 +21,7 @@ export const DetallesSection = () => {
             <div className={styles.lineOneTarjeta}>
               <img className={styles.locationIcon} src={locGreen} alt="location"/>
               <p className={styles.locationTarjetaInfo}>
-                <span className={styles.boldTarjeta}>El Tinto Golf Course</span> - Cancún
-              </p>
+                <span className={styles.boldTarjeta}>El Tinto Cancun Country Club</span></p>
             </div>
             <div className={styles.lineTwoTarjeta}>
               <img className={styles.relojIcon} src={reloj} alt="reloj"/>

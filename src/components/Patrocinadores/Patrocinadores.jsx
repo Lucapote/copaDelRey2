@@ -1,9 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from "./Patrocinadores.module.css"
 import { LogoItem } from "../LogoItem/LogoItem"
 
 export const Patrocinadores = () => {
     const [isMobile, setIsMobile] = useState(false);
+    const carouselRef = useRef(null);
+    const intervalRef = useRef(null);
+    const directionRef = useRef(1); // 1 para derecha, -1 para izquierda
 
     const logos = [
         {id: 1, src: "img/patrocinadores/logo1.png", alt: "Logo Catedral", fila: 1},
@@ -35,15 +38,78 @@ export const Patrocinadores = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // Auto scroll para móvil
+    useEffect(() => {
+        if (!isMobile || !carouselRef.current) return;
+
+        const startAutoScroll = () => {
+            intervalRef.current = setInterval(() => {
+                const container = carouselRef.current;
+                if (!container) return;
+
+                const maxScroll = container.scrollWidth - container.clientWidth;
+                const currentScroll = container.scrollLeft;
+                const scrollStep = 1; // Velocidad del scroll (menor = más suave)
+
+                if (directionRef.current === 1) {
+                    // Scrolling hacia la derecha
+                    if (currentScroll >= maxScroll) {
+                        directionRef.current = -1; // Cambiar dirección
+                    } else {
+                        container.scrollLeft += scrollStep;
+                    }
+                } else {
+                    // Scrolling hacia la izquierda
+                    if (currentScroll <= 0) {
+                        directionRef.current = 1; // Cambiar dirección
+                    } else {
+                        container.scrollLeft -= scrollStep;
+                    }
+                }
+            }, 20); // Intervalo en milisegundos (menor = más suave)
+        };
+
+        const stopAutoScroll = () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+                intervalRef.current = null;
+            }
+        };
+
+        // Iniciar auto scroll
+        startAutoScroll();
+
+        // Pausar en hover y touch
+        const container = carouselRef.current;
+        container.addEventListener('mouseenter', stopAutoScroll);
+        container.addEventListener('mouseleave', startAutoScroll);
+        container.addEventListener('touchstart', stopAutoScroll);
+        container.addEventListener('touchend', startAutoScroll);
+
+        // Cleanup
+        return () => {
+            stopAutoScroll();
+            if (container) {
+                container.removeEventListener('mouseenter', stopAutoScroll);
+                container.removeEventListener('mouseleave', startAutoScroll);
+                container.removeEventListener('touchstart', stopAutoScroll);
+                container.removeEventListener('touchend', startAutoScroll);
+            }
+        };
+    }, [isMobile]);
+
     return (
         <section id="patrocinadores" className={styles.patrocinadores}>
             <div className={styles.contenedorPatrocinadores}>
                 <h2 className={styles.title}>patrocinadores</h2>
 
                 {isMobile ? (
-                    // Vista móvil - Carrusel con scroll
+                    // Vista móvil - Carrusel con scroll automático
                     <div className={styles.carouselWrapper}>
-                        <div className={styles.carouselContainer}>
+                        <div 
+                            ref={carouselRef}
+                            className={styles.carouselContainer}
+                        >
                             <div className={styles.carouselTrack}>
                                 {logos.map(logo => (
                                     <div key={logo.id} className={styles.carouselItem}>

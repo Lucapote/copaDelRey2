@@ -26,7 +26,7 @@ export const AgendaSection = () => {
             Premiación
           </DetallesCard>
           <DetallesCard imgSrc={cena} altText={"cena"}>
-            <span className={styles.boldDetallesAgenda}>Comida</span> Gourmet
+            <span className={styles.boldDetallesAgenda}>Comida</span> Gourmet <br /> de premiación
           </DetallesCard>
         </div>
       </div>

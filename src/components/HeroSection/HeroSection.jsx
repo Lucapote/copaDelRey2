@@ -24,7 +24,7 @@ export const HeroSection = () => {
             </div>
             <div className={styles.location}>
               <img src={locWhite} alt="location" className={styles.locationIcon}/>
-              <p className={styles.locationSite}>El Tinto Golf Court - Cancún</p>
+              <p className={styles.locationSite}>El Tinto Cancun Country Club</p>
             </div>
           </div>
         </article>

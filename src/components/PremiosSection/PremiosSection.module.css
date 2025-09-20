@@ -1,5 +1,7 @@
 .premiosSection{
     background-image: url("../../../public/img/fondoPremios.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     display: flex;

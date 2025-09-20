@@ -39,7 +39,7 @@
 
 .title {
     font-family: "Monserrat Italic";
-    font-size: clamp(60px, 8vw, 110px); /* Responsive */
+    font-size: clamp(50, 8vw, 110px); /* Responsive */
     color: var(--colorVerdeLogo);
     margin: 0;
     line-height: 1;
@@ -159,7 +159,6 @@
 
     .logoTorneo{
         max-width: none;
-        width: unset;
         align-items: center;
         flex: 1;
     }
