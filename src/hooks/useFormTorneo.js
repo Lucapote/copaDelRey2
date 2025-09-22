@@ -112,7 +112,7 @@ export const useFormTorneo = () => {
                         WHATSAPP: formattedPhone,
                         NOMBRE_PAREJA: formData.nombrePareja
                     },
-                    listIds: [2],
+                    listIds: [8],
                     updateEnabled: true
                 })
             });
