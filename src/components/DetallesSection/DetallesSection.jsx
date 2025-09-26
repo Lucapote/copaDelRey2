@@ -34,6 +34,11 @@ export const DetallesSection = () => {
                 <span className={styles.boldTarjeta}>Formato:</span> Pareja bola baja con salida A go-go, modalidad: Mixta
               </p>
             </div>
+            <div className={styles.lineFourTarjeta}>
+              <p className={styles.locationTarjetaInfo}>
+                <span className={styles.boldTarjeta}>Inscripción Individual:</span> $5500 MXN
+              </p>
+            </div>
           </div>
         </div>
         <img className={styles.golfistaDetalles} src={golfista} alt="golfista" />

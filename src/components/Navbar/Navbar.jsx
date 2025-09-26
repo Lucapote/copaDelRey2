@@ -14,6 +14,10 @@ export const Navbar = () => {
     { id: 7, text: "REGISTRO", href: "#registro" }
   ];
 
+  const esRegistro = (item) => {
+    return item.text === "REGISTRO" ? styles.linkRegistro : "";
+  }
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
@@ -56,7 +60,7 @@ export const Navbar = () => {
           <ul className={styles.menu}>
             {navItems.map((item) => (
               <li key={item.id} className={styles.item}>
-                <a href={item.href} className={styles.link}>
+                <a href={item.href} className={`${styles.link} ${esRegistro(item)}`}>
                   {item.text}
                 </a>
               </li>
@@ -83,7 +87,7 @@ export const Navbar = () => {
             <li key={item.id} className={styles.mobileMenuItem}>
               <a 
                 href={item.href} 
-                className={styles.mobileMenuLink}
+                className={`${styles.mobileMenuLink} ${esRegistro(item)}`}
                 onClick={handleLinkClick}
               >
                 {item.text}

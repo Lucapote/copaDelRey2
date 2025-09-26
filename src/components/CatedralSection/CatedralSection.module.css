@@ -1,0 +1,58 @@
+.catedralSection{
+    background-color: var(--colorVerdeLogo);
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    border: 1px solid var(--blanco);
+    padding: 32px;
+}
+
+.textoIzquierda,
+.imagenDerecha{
+    flex: 1;
+}
+
+.texto{
+    font-family: "Monserrat Italic";
+    color: var(--blanco);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.destacado{
+    font-family: "Monserrat Bold";
+}
+
+.imagenDerecha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgLogo{
+    max-width: 300px;
+}
+
+@media (max-width: 1024px){
+    .container{
+        flex-direction: column;
+        height: fit-content;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .texto{
+        font-size: 16px;
+    }
+
+    .imgLogo{
+        max-width: 250px;
+    }
+}

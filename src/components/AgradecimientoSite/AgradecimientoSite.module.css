@@ -1,0 +1,95 @@
+.agradecimientoSite{
+    height: 100vh;
+}
+.imagenSuperiorFondo{
+    height: 60vh;
+    background-image: url(/img/agradecimientoFondo.jpg);
+    background-position: 0 -230px;
+    background-size: cover;
+}
+.imagenInferiorFondo{
+    height: 40vh;
+    background-image: url(/img/fotoTexturaCesped.jpg);
+    background-size: cover;
+}
+
+.contenedorTexto{
+    position: absolute;
+    background-color: var(--blanco);
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+}
+
+.contenidoIzquierda,
+.contenidoDerecha{
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    flex: 1;
+    padding: 64px;
+    align-items: center;
+}
+
+.contenidoIzquierda{
+    border-right: 1px solid var(--colorVerdeLogo);
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenidoDerecha{
+    gap: 20px;
+}
+
+.imagenLogo{
+    max-width: 260px;
+}
+
+.textoAgradecimiento,
+.textoPago,
+.listItems{
+    font-family: "Monserrat Medium";
+    color: var(--verdeOscuro);
+    line-height: 1.5;
+}
+
+.textoAgradecimiento{
+    font-size: 18px;
+    max-width: 330px;
+}
+
+.textoPago,
+.listItems{
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.glittenText{
+    font-family: "Glitten Regular";
+    font-size: 20px;
+}
+
+.textoAgradecimientoCentrado{
+    text-align: center;
+    max-width: 260px;
+}
+
+.boldText{
+    font-family: "Monserrat Bold";
+}
+
+.boton{
+    background-color: var(--colorVerdeLogo);
+    color: var(--verdeOscuro);
+    border: none;
+    width: fit-content;
+    font-size: 16px;
+    font-family: "Monserrat Italic";
+    padding: 16px 32px;
+    cursor: pointer;
+}

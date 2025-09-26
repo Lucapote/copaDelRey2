@@ -8,3 +8,9 @@
     text-transform: uppercase;
     color: var(--blanco);
 }
+
+.buttonLinkRegistro{
+    border: 1px solid var(--colorVerdeLogo);
+    background-color: var(--colorVerdeLogo);
+    color: var(--verdeOscuro);
+}

@@ -30,6 +30,7 @@
     margin-bottom: 30px;
     line-height: 1.1;
     text-align: center;
+    overflow: hidden;
 }
 
 .glittenDetalles {
@@ -72,7 +73,8 @@
     gap: 15px;
 }
 
-.lineThreeTarjeta{
+.lineThreeTarjeta,
+.lineFourTarjeta{
     margin-left: 35px;
 }
 
@@ -81,6 +83,10 @@
     width: 20px;
     height: 28px;
     flex-shrink: 0;
+}
+
+.relojIcon{
+    height: 20px;
 }
 
 .locationTarjetaInfo {

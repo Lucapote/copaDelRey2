@@ -9,7 +9,7 @@ export const Patrocinadores = () => {
     const directionRef = useRef(1); // 1 para derecha, -1 para izquierda
 
     const logos = [
-        {id: 1, src: "img/patrocinadores/logo1.png", alt: "Logo Catedral", fila: 1},
+        // {id: 1, src: "img/patrocinadores/logo1.png", alt: "Logo Catedral", fila: 1},
         {id: 2, src: "img/patrocinadores/logo2.png", alt: "Logo El Tinto", fila: 1},
         {id: 3, src: "img/patrocinadores/logo3.png", alt: "Logo Back 9", fila: 2},
         {id: 4, src: "img/patrocinadores/logo4.png", alt: "Logo Oye", fila: 2},

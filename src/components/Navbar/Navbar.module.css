@@ -37,6 +37,7 @@
 .item {
   position: relative;
   border-right: 1px solid var(--colorVerdeLogo);
+  display: flex;
 }
 
 .item:last-child {
@@ -191,6 +192,15 @@
 .mobileMenuLink:focus {
   color: var(--colorVerdeLogo);
   padding-left: 20px;
+}
+
+.linkRegistro{
+  background-color: var(--colorVerdeLogo);
+  color: var(--verdeOscuro);
+}
+
+.linkRegistro:hover{
+  color: var(--blanco);
 }
 
 /* Overlay */
