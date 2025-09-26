@@ -86,7 +86,8 @@
     font-family: "Monserrat Bold";
 }
 
-.boton{
+.boton,
+.botonHome{
     background-color: var(--colorVerdeLogo);
     color: var(--verdeOscuro);
     border: none;
@@ -98,9 +99,23 @@
     transition: all 0.3s ease-in;
 }
 
-.boton:hover{
+.boton:hover,
+.botonHome:hover{
     background-color: var(--verdeOscuro);
     color: var(--colorVerdeLogo);
+}
+
+.botonHome{
+    font-size: 14px;
+    padding: 12px 24px;
+    background-color: var(--verdeOscuro);
+    color: var(--colorVerdeLogo);
+    border: 1px solid var(--colorVerdeLogo);
+}
+
+.botonHome:hover{
+    background-color: var(--colorVerdeLogo);
+    color: var(--verdeOscuro);
 }
 
 @media (max-width: 1024px){
@@ -151,5 +166,10 @@
     .list{
         max-width: 300px;
         padding: 0;
+    }
+
+    .botonHome{
+        font-size: 12px;
+        padding: 8px 16px;
     }
 }

@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const useFormTorneo = () => {
+    const navigate = useNavigate();
+    
     const [formData, setFormData] = useState({
         nombre: "",
         handicap: "",
@@ -17,7 +20,7 @@ export const useFormTorneo = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [message, setMessage] = useState("");
     const [isSuccess, setIsSuccess] = useState(false);
-    const [isRegistered, setIsRegistered] = useState(false); // Nuevo estado para mantener el registro
+    const [isRegistered, setIsRegistered] = useState(false);
 
     const formatPhoneNumber = (phone) => {
         const cleanPhone = phone.replace(/\D/g, '');
@@ -71,7 +74,6 @@ export const useFormTorneo = () => {
             correo: "",
             nombrePareja: ""
         });
-        // No reseteamos el mensaje ni isSuccess si el usuario ya está registrado
         if (!isRegistered) {
             setMessage("");
             setIsSuccess(false);
@@ -118,10 +120,8 @@ export const useFormTorneo = () => {
             });
 
             if (response.ok) {
-                setMessage("¡Registro exitoso! Te has inscrito al torneo correctamente.");
-                setIsSuccess(true);
-                setIsRegistered(true); // Marcar como registrado
-                resetForm();
+                // Redirigir a la página de agradecimiento cuando el registro sea exitoso
+                navigate('/agradecimiento');
             } else {
                 const errorData = await response.json();
                 console.error("Error de Brevo", errorData);
@@ -150,7 +150,7 @@ export const useFormTorneo = () => {
         isLoading,
         message,
         isSuccess,
-        isRegistered, // Exportar el nuevo estado
+        isRegistered,
         handleInputChange,
         submitForm,
         resetForm
