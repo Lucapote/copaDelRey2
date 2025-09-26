@@ -2,7 +2,7 @@ import styles from './AgradecimientoSite.module.css'
 
 export const AgradecimientoSite = () => {
 
-    const logoVerde = "/img/LogoVerdeBrillante.png"
+    const logoVerde = "/img/logoBicolor.png"
     const openWhatsapp = () => {
         const encodedMessage = encodeURIComponent("Hago envío de mi comprobante!")
         const urlWhatsapp = `https://wa.me/529984410952?text=${encodedMessage}`

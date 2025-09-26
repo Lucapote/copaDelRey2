@@ -8,6 +8,7 @@
     background-image: url(/img/agradecimientoFondo.jpg);
     background-position: 0 -230px;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .imagenInferiorFondo{
     height: 40vh;
@@ -100,4 +101,46 @@
 .boton:hover{
     background-color: var(--verdeOscuro);
     color: var(--colorVerdeLogo);
+}
+
+@media (max-width: 1024px){
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenedorTexto{
+        position: static;
+        flex-direction: column;
+        transform: none;
+        align-items: center;
+    }
+
+    .imagenLogo{
+        max-width: 180px;
+    }
+
+    .textoAgradecimiento{
+        font-size: 16px;
+    }
+
+    .contenidoDerecha,
+    .contenidoIzquierda{
+        width: fit-content;
+        padding: 0;
+    }
+
+    .imagenSuperiorFondo,
+    .imagenInferiorFondo{
+        display: none;
+    }
+
+    .contenidoIzquierda{
+        border-right: 0;
+        border-bottom: 1px solid var(--colorVerdeLogo);
+    }
+
+    .textoPago{
+        width: 330px;
+    }
 }
