@@ -108,12 +108,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 100vw;
     }
     .contenedorTexto{
         position: static;
         flex-direction: column;
         transform: none;
         align-items: center;
+        width: 100%;
     }
 
     .imagenLogo{
@@ -122,12 +124,13 @@
 
     .textoAgradecimiento{
         font-size: 16px;
+        color: var(--colorVerdeLogo);
     }
 
     .contenidoDerecha,
     .contenidoIzquierda{
-        width: fit-content;
-        padding: 0;
+        width: 100%;
+        padding: 24px 0;
     }
 
     .imagenSuperiorFondo,
@@ -137,7 +140,8 @@
 
     .contenidoIzquierda{
         border-right: 0;
-        border-bottom: 1px solid var(--colorVerdeLogo);
+        border-bottom: 4px solid var(--colorVerdeLogo);
+        background-color: var(--verdeOscuro);
     }
 
     .textoPago{
