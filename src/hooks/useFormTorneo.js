@@ -130,7 +130,7 @@ export const useFormTorneo = () => {
                 if (errorData.code === 'invalid_parameter' && errorData.message.includes('phone')) {
                     setMessage("El número de teléfono no es válido. Por favor, revisa que esté correcto.");
                 } else if (errorData.code === 'duplicate_parameter') {
-                    setMessage("Este correo ya está registrado en el torneo.");
+                    setMessage("Este correo o telefono ya está registrado en el torneo.");
                 } else {
                     setMessage("Hubo un error al registrarte. Por favor, intenta nuevamente.");
                 }
