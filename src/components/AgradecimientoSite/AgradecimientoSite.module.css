@@ -147,4 +147,9 @@
     .textoPago{
         width: 330px;
     }
+
+    .list{
+        max-width: 300px;
+        padding: 0;
+    }
 }
