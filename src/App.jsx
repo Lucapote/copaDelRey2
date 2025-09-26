@@ -11,6 +11,7 @@ import { PremiosSection } from './components/PremiosSection/PremiosSection'
 import { Footer } from './components/Footer/Footer'
 import { WhatsappButton } from './components/WhatsappButton/WhatsappButton'
 import { AgradecimientoSite } from './components/AgradecimientoSite/AgradecimientoSite'
+import { ScrollToTop } from './components/ScrollToTop/ScrollToTop'
 import "./index.css"
 
 // Componente para la página principal
@@ -45,6 +46,7 @@ const ThankYouPage = () => {
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/agradecimiento" element={<ThankYouPage />} />
